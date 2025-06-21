@@ -38,7 +38,7 @@ struct LatestListingsView: View {
                     Button(action: {
                         viewModel.searchTapped()
                     }) {
-                        Image(systemName: "magnifyingglass")
+                        Image(.search)
                     }
                 }
                 ToolbarItem {
@@ -46,7 +46,7 @@ struct LatestListingsView: View {
                         viewModel.cartTapped()
                     })
                     {
-                        Image(systemName: "cart")
+                        Image(.cart)
                     }
                 }
             }
