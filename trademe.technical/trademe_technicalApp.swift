@@ -15,7 +15,6 @@ struct trademe_technicalApp: App {
             let listingsProvider = LatestListingProvider(fetcher: listingsFetcher)
             
             RootView(discoverViewModel: .init(listingsProvider: listingsProvider))
-                .accentColor(.tasman500)
         }
     }
 }
