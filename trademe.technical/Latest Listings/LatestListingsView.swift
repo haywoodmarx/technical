@@ -129,13 +129,15 @@ extension LatestListingsView.ListingView {
                         .foregroundColor(.bluffOyster600)
                 }
                 Spacer()
-                VStack(alignment: .trailing) {
-                    Text(listing.priceDisplay)
-                        .fontWeight(.medium)
-                        .foregroundColor(.bluffOyster800)
-                    Text("Buy Now")
-                        .font(.caption)
-                        .foregroundColor(.bluffOyster600)
+                if let buyNowPrice = listing.buyNowPrice {
+                    VStack(alignment: .trailing) {
+                        Text(buyNowPrice, format: .dollarAmount)
+                            .fontWeight(.medium)
+                            .foregroundColor(.bluffOyster800)
+                        Text("Buy Now")
+                            .font(.caption)
+                            .foregroundColor(.bluffOyster600)
+                    }
                 }
             }
         }
